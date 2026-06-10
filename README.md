@@ -1,8 +1,8 @@
 
-# 2026_TP2_Nº[18] - e-commerce Web
+# 2026_TP2_Nº18 - e-commerce Web
 
 ## Propósito del Proyecto
-Este repositorio es sobre una pagina web de venta de cosas de tecnologia de una empresa/emprendimiento
+Este repositorio es sobre una página web de venta de cosas de tecnología de una empresa/emprendimiento
 
 
 ## Integrantes del Grupo
@@ -10,4 +10,3 @@ Este repositorio es sobre una pagina web de venta de cosas de tecnologia de una 
 - Kim
 - Vicente
 - Lopez del Prado
-
