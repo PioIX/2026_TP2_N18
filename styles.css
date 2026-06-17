@@ -1,0 +1,252 @@
+/* --- CONFIGURACIÓN GENERAL Y FUENTES --- */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --background-light: #f8f9fa;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--white);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- SECCIÓN INICIO (Degradado en Fondo) --- */
+.hero-section {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Propiedad de Background aplicada */
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- SECCIÓN PRODUCTOS (Responsivo con Flexbox) --- */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+.card .precio {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* --- SECCIÓN RESEÑAS (Distribución con Grid) --- */
+.resenas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.resena-box {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--accent-color);
+}
+
+.resena-box h4 {
+    margin-bottom: 0.5rem;
+}
+
+.calificacion {
+    margin-bottom: 0.5rem;
+}
+
+/* --- SECCIÓN CONTACTO (Formulario & Media Queries) --- */
+.contacto-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    width: 100%;
+}
+
+.btn-enviar {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #2980b9;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--primary-color);
+    color: #bdc3c7;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* --- MEDIA QUERIES (Responsividad específica para Contacto e Header) --- */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contacto-section {
+        padding: 1.2rem;
+    }
+    
+    .btn-enviar {
+        padding: 0.8rem;
+    }
+}
